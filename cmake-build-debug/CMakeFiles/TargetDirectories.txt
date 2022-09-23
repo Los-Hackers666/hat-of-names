@@ -1,3 +1,3 @@
-C:/CProyects/hat-of-names-hackers/cmake-build-debug/CMakeFiles/hat_of_names_hackers.dir
-C:/CProyects/hat-of-names-hackers/cmake-build-debug/CMakeFiles/edit_cache.dir
-C:/CProyects/hat-of-names-hackers/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+C:/Users/steve/workspace/hat-of-names/cmake-build-debug/CMakeFiles/hat_of_names_hackers.dir
+C:/Users/steve/workspace/hat-of-names/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/steve/workspace/hat-of-names/cmake-build-debug/CMakeFiles/rebuild_cache.dir
