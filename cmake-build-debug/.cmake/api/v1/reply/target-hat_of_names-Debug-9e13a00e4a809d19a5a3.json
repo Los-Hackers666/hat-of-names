@@ -2,10 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "main2.exe"
+			"path" : "hat_of_names.exe"
 		},
 		{
-			"path" : "main2.pdb"
+			"path" : "hat_of_names.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -27,7 +27,7 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 7,
+				"line" : 6,
 				"parent" : 0
 			}
 		]
@@ -59,7 +59,7 @@
 			]
 		}
 	],
-	"id" : "main2::@6890427a1f51a3e7e1df",
+	"id" : "hat_of_names::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -79,8 +79,8 @@
 		],
 		"language" : "C"
 	},
-	"name" : "main2",
-	"nameOnDisk" : "main2.exe",
+	"name" : "hat_of_names",
+	"nameOnDisk" : "hat_of_names.exe",
 	"paths" : 
 	{
 		"build" : ".",
@@ -101,7 +101,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main2.c",
+			"path" : "main.c",
 			"sourceGroupIndex" : 0
 		}
 	],

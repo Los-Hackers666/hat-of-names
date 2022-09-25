@@ -1,7 +1,3 @@
-//
-// Created by llth on 9/24/22.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -17,7 +13,7 @@ typedef struct student
 char **create_pool(const char *path, int student_count)
 {
     FILE *file = NULL;
-    file = fopen("../polla.txt"/*path*/, "r");
+    file = fopen(path, "r");
     char **pool = malloc(sizeof(char *) * student_count);
 
     if(file == NULL)
@@ -47,7 +43,7 @@ char **create_pool(const char *path, int student_count)
 int count_students(const char *path)
 {
     FILE *file = NULL;
-    file = fopen("../polla.txt", "r");
+    file = fopen(path, "r");
 
     char buffer[MAX_LINE_SIZE];
     int student_count = 0;
@@ -62,11 +58,8 @@ int count_students(const char *path)
     return student_count;
 }
 
-
-student *pick_student(char **pool)
+student *pick_student(char **pool, int size)
 {
-    int size= count_students("../polla.txt");
-
     if(size > 0)
     {
         srand(time(NULL));
@@ -88,29 +81,30 @@ student *pick_student(char **pool)
 int main(int argc, char **argv)
 {
     //FILE *descriptor = NULL;
-    int size = count_students("../polla.txt"/*argv[1]*/);
+    int size = count_students(argv[1]);
     printf("%d\n", size);
 
     if(argc != 2) printf("Usage: hofn <file>");
     else
     {
         printf("Using file %s\n", argv[1]);
-        char **pool = create_pool("../polla.txt"/*argv[1]*/, size);
+        char **pool = create_pool(argv[1], size);
 
         int command = 0;
-        int count=0;
-        while((command = fgetc(stdin))  != EOF){
+        int count = 0;
 
+        while((command = fgetc(stdin))  != EOF)
+        {
             if(command == 'p')
             {
                 if(count == size)
                 {
-                    printf("Ya no hay usuarios para mostrar padrino\n");
+                    printf("No more users to pull.\n");
                     fflush(stdin);
                     break;
                 }
 
-                student *student_rand = pick_student(pool);
+                student *student_rand = pick_student(pool, size);
                 count++;
 
                 printf("Pulled: %s\n", student_rand->name);
@@ -118,13 +112,12 @@ int main(int argc, char **argv)
             }
             else
             {
-                printf("Saquese pa, not a command");
+                printf("Get out pa, not a command");
                 break;
-
             }
+
             fflush(stdin);
         }
-
     }
 
     return 0;

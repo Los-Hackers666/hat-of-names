@@ -1,0 +1,3 @@
+"D:\CLion 2022.2\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\hat_of_names.dir/objects.a
+"D:\CLion 2022.2\bin\mingw\bin\ar.exe" qc CMakeFiles\hat_of_names.dir/objects.a @CMakeFiles\hat_of_names.dir\objects1.rsp
+"D:\CLion 2022.2\bin\mingw\bin\gcc.exe" -g -Wl,--whole-archive CMakeFiles\hat_of_names.dir/objects.a -Wl,--no-whole-archive -o hat_of_names.exe -Wl,--out-implib,libhat_of_names.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\hat_of_names.dir\linklibs.rsp
